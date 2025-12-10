@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="mauldi">halo dunia</h1>
+    <h1 id="syah">good luck</h1>
+
+    <label for="colorPicker">Pilih Warna untuk 'good luck':</label>
+    <input type="color" id="colorPicker">
+    
+    <button onclick="ubahTeks()">ubah teks</button>
+
+    <script>
+        function ubahTeks() {
+            document.getElementById("mauldi").innerHTML = "HAI MAULDI SYAH REIN";
+            document.getElementById("mauldi").style.color = 'purple';
+        }
+        
+        const teksSyah = document.getElementById('syah');
+        
+        const colorPicker = document.getElementById('colorPicker');
+
+        colorPicker.addEventListener('input', function() {
+            teksSyah.style.color = this.value; 
+            teksSyah.style.backgroundColor = 'pink';
+        });
+        
+    </script>
+
+</body>
+</html>
